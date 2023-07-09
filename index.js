@@ -12,8 +12,10 @@ class Employee {
   set name(value) {
     if (typeof value !== 'string') {
       console.log('Name must be a string');
+      return;
     } else if (value.length < 4) {
       console.log('Name must be greater then 4 symbols');
+      return;
     }
     this._name = value;
   }
@@ -71,3 +73,4 @@ data.forEach((programmer) => {
   console.log(programmer);
 });
 console.log(programmer1.salary);
+
